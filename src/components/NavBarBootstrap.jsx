@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import CartWidgetIcons from './CartWidgetIcons';
 
 function NavBarBootstrap() {
 return (
@@ -23,10 +24,13 @@ return (
             </NavDropdown>
         </Nav>
         </Navbar.Collapse>
+        <CartWidgetIcons/>
     </Container>
     </Navbar>
 );
 }
 
+
 export default NavBarBootstrap;
+
 
