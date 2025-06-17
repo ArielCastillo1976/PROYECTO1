@@ -1,31 +1,26 @@
-import './App.css'
+//import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './components/ItemListContainer'
-// import NavBar from './components/NavBar'
 import NavBarBootstrap from './components/NavBarBootstrap';
-// import ButtonMultiuso from "./examples/ButtonMultiuso"
-// import Contador from './examples/Contador'
-function App() {
-//  const styles = {
-//   backgroundColor:'yellow',
-//   padding:'1rem',
-//   color:'black',
-//   fontWeight:'bold'
-//  }
+import ItemDetailContainer from './components/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ErrorPage from './components/ErrorPage';
+//import ItemCount from './components/ItemCount';
 
-//  const saludar = () =>{
-//   alert('Hola!')
-//  }
+function App() {
+
 
   return (
-    <>
-    <NavBarBootstrap/>
-    {/* <NavBar/> */}
-    <ItemListContainer saludo='Bienvenido! Tu experiencia comienza ahora.'/>
-    {/* <Contador/>
-      <ButtonMultiuso texto={'Hace Click!'} styles={styles} handler={saludar}/>
-      <ButtonMultiuso texto='Otro boton' cssStyle='mi-boton'/> */}
-    </>
+    <BrowserRouter>
+      <NavBarBootstrap />
+      <Routes>
+        <Route path='/' element={<ItemListContainer saludo='Bienvenido! Tu experiencia comienza ahora.'/>}/>
+        <Route path='/category/:categoryId' element={<ItemListContainer saludo='Bienvenido! Tu experiencia comienza ahora.'/>}/>
+        <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        <Route path='*' element={<ErrorPage/>}/>
+      </Routes>     
+      {/* <ItemCount stock={5} /> */}
+      </BrowserRouter>
   )
 }
 
