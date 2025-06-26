@@ -1,7 +1,7 @@
 const productos=[
     {
         id:'01',
-        name:'Random 1',
+        name:'Difusor Luz Aura',
         description:'lorem lorem lorem',
         stock:50,
         price:2000,
@@ -10,7 +10,7 @@ const productos=[
     },
     {
         id:'02',
-        name:'Random 2',
+        name:'Difusor Palo Santo',
         description:'lorem lorem lorem',
         stock:30,
         price:3000,
@@ -19,7 +19,7 @@ const productos=[
     },
     {
         id:'03',
-        name:'Random 3',
+        name:'Difusor Santal',
         description:'lorem lorem lorem',
         stock:10,
         price:1000,
@@ -28,7 +28,7 @@ const productos=[
     },
     {
         id:'04',
-        name:'Random 4',
+        name:'Difusor Rocio Aurico',
         description:'lorem lorem lorem',
         stock:40,
         price:4000,
