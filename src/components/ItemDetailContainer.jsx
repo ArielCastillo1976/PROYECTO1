@@ -9,19 +9,13 @@ import { db } from '../service/firebase'
 const ItemDetailContainer = () => {
     const [detail, setDetail] =useState({})
     const [cargando, setCargando]= useState(false)
-     const [invalid, setInvalid]= useState(false)
+    const [invalid, setInvalid]= useState(false)
     const {id} = useParams()
  
-  //FIREBASE
   useEffect(()=>{
     setCargando(true)
-    //conectar con nuestra coleccion
     const productCollection = collection(db, "products")
-    //crear la ref
     const docRef = doc(productCollection, id)
-    //pedir el doc
-    //manera corta
-    //const docRef= doc(db,"products", id)
     getDoc(docRef)
     .then((res)=>{
       if(res.data()){
@@ -33,16 +27,6 @@ const ItemDetailContainer = () => {
     .catch((error)=> console.log(error))
     .finally(()=> setCargando(false))
   },[])
-
-
-    //MOCK LOCAL
-    // useEffect(()=>{
-    //   setCargando(true)
-    //     getOneProduct(id)
-    //     .then((res)=> setDetail(res))
-    //     .catch((error)=> console.log(error))
-    //     .finally(()=> setCargando(false))
-    // },[])
 
     if(invalid){
       return <div>

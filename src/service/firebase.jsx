@@ -6,15 +6,15 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBScQ3hITGBjR3zLCeHYEi8qd8C7H9RweQ",
-  authDomain: "difusores-e7977.firebaseapp.com",
-  projectId: "difusores-e7977",
-  storageBucket: "difusores-e7977.firebasestorage.app",
-  messagingSenderId: "74280770172",
-  appId: "1:74280770172:web:32330035b8d08156e887f9"
+  apiKey: "AIzaSyBXtzTA7tp5p7SmAVTEzUgvxaIfYQzdxq8",
+  authDomain: "difusores-d0806.firebaseapp.com",
+  projectId: "difusores-d0806",
+  storageBucket: "difusores-d0806.firebasestorage.app",
+  messagingSenderId: "156435510766",
+  appId: "1:156435510766:web:d6741d0153b3c270be0aff"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const dataBase = getFirestore(app)
+export const db = getFirestore(app)

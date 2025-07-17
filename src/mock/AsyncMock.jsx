@@ -1,39 +1,31 @@
-const productos=[
+export const productos=[
+    
     {
-        id:'01',
-        name:'Difusor Luz Aura',
-        description:'armoniza el ambiente elevando la energía y el bienestar',
-        stock:50,
-        price:2000,
-        category:'nuevos',
-        img:'/image/difusorluzaura.jpg'
-    },
-    {
-        id:'02',
+
         name:'Difusor Palo Santo',
         description:'madera sagrada para elevar la vibración y armonizar la energía',
         stock:30,
         price:3000,
         category:'ofertas',
-        img:'/image/difusorpalosanto.jpg'
+        img:'https://picsum.photos/207'
     },
     {
-        id:'03',
+
         name:'Difusor Santal',
         description:'emite aroma cálido y amaderado que equilibra emociones',
         stock:10,
         price:1000,
         category:'mas vendidos',
-        img:'/image/difusorsantal.jpg'
+        img:'https://picsum.photos/208'
     },
     {
-        id:'04',
+
         name:'Difusor Rocio Aurico',
         description:'limpia el aura, eleva la vibración y promueve el equilibrio emocional',
         stock:40,
         price:4000,
         category:'mas vendidos',
-        img:'/image/difusorrocioaurico.jpg'
+        img:'https://picsum.photos/209'
     }
 ]
 

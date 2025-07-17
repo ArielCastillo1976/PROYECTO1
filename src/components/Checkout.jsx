@@ -18,7 +18,6 @@ const Checkout = () => {
     }
     console.log(buyer)
     const finalizarCompra = (e) => {
-        //no recargue la app
         e.preventDefault()
         if(!buyer.name || !buyer.lastname || !buyer.email || !buyer.address){
             alert('Por favor completa todos los campos')
@@ -32,7 +31,6 @@ const Checkout = () => {
                 date:serverTimestamp()
             }
             const ventas = collection(db, "orders")
-            //agregar un doc
             addDoc(ventas, order)
             .then((res)=>{
                 setOrderId(res.id)
